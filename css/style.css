@@ -123,7 +123,9 @@
 			padding: 2rem 0;
 		}
 		.dev-portfolio {
+			display: -ms-grid;
 			display: grid;
+			-ms-grid-columns: 1fr 1.5rem 1fr 1.5rem 1fr;
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 1.5rem;
 		}
@@ -163,9 +165,11 @@
 			margin-left: 0.5rem;
 		}
 		.cv-content {
+			display: -ms-grid;
 			display: grid;
 			grid-gap: 1.5rem;
-			grid-template-columns: repeat(2, 1fr)
+			-ms-grid-columns: 1fr 1.5rem 1fr;
+			grid-template-columns: repeat(2, 1fr);
 		}
 		.cv-content-left, .cv-content-right {
 			display: -webkit-box;
@@ -221,12 +225,15 @@
 			position: absolute;
 			top: 1.5rem;
 			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
 			transform: translateX(-50%);
 		}
 
 
 		@media screen and (max-width: 960px) {
 			.cv-content {
+				-ms-grid-columns: 1fr;
 				grid-template-columns: 1fr;
 			}
 		}
@@ -245,15 +252,15 @@
 		}
 		@media screen and (max-width: 560px) {
 			.header-mobile-socials-flex {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
 			}
 			.header-links:not(:first-child) {
 			margin-left: 0;
@@ -281,6 +288,7 @@
 			flex-basis: 50%;
 			}
 			.dev-portfolio {
+			-ms-grid-columns: 1fr 1rem 1fr;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 1rem;
 			}
@@ -298,6 +306,7 @@
 		}
 		@media screen and (max-width: 320px) {
 			.dev-portfolio {
+			-ms-grid-columns: 1fr;
 			grid-template-columns: 1fr;
 			}
 			.tools-col {
